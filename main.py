@@ -29,5 +29,5 @@ async def on_message(message):
     if message.content.startswith('hello'):
         await message.channel.send(f'Hello {message.author.mention}! I am a basic Discord bot.')
 
-# Run the bot with your Discord bot token
+# Run the bot with your Discord bot token THIS IS WHERE TO PUT THE KEY THEY GIVE US
 client.run('BOT_TOKEN_HERE')
