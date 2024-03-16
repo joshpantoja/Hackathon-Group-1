@@ -2,6 +2,8 @@
 
 import discord
 
+#import os
+
 # Define bot's intents/permissions
 intents = discord.Intents.default()
 intents.guilds = True
@@ -31,3 +33,7 @@ async def on_message(message):
 
 # Run the bot with your Discord bot token THIS IS WHERE TO PUT THE KEY THEY GIVE US
 client.run('BOT_TOKEN_HERE')
+
+# client.run(os.getenv('TOKEN'))
+# This code will access the token from the env page
+# This is only used if the token is made public to other users online
