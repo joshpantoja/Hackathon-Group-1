@@ -1,8 +1,8 @@
 # This is going to be the main Python file for the Hackathon Chatbot
 
-import discord
+import os
 
-#import os
+import discord
 
 # Define bot's intents/permissions
 intents = discord.Intents.default()
@@ -31,11 +31,7 @@ async def on_message(message):
     if message.content.startswith('hello'):
         await message.channel.send(f'Hello {message.author.mention}! I am a basic Discord bot.')
 
-# Run the bot with your Discord bot token THIS IS WHERE TO PUT THE KEY THEY GIVE US
-client.run('BOT_TOKEN_HERE')
-
-# client.run(os.getenv('TOKEN'))
-# This code will access the token from the env page
-# This is only used if the token is made public to other users online
+# Read the bot token from the TOKEN environment variable so it never gets committed
+client.run(os.environ['TOKEN'])
 
 # added this one line to the end of my branch to see how it works
